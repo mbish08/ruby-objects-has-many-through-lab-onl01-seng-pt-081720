@@ -24,5 +24,9 @@ class Doctor
   end 
   # binding.pry 
   
+  def patients
+    
+  end 
+  
   #date, patient, doctor
 end 
