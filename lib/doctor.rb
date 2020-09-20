@@ -1,0 +1,26 @@
+require 'pry'
+
+class Doctor
+  
+  attr_accessor :name 
+  @@all = []
+  
+  def initialize(name)
+    @name = name
+    @@all << self 
+  end 
+  
+  def self.all
+    @@all 
+  end 
+  
+  def appointments 
+    Appointment.all.select do |appointment|
+      appointment.name == self
+    end
+   
+  end 
+  # binding.pry 
+  
+  
+end 
